@@ -4,8 +4,8 @@ import { ListItem, Avatar } from 'react-native-elements';
 
 function Menu(props){
     const renderMenuItem = ({item}) => (
-        <ListItem>
-            <Avatar source = {{uri: 'https://natashaskitchen.com/wp-content/uploads/2020/04/Pizza-Dough-Best-Pizza-Crust-Recipe-3-500x500.jpg'}} />
+        <ListItem onPress={() => {props.onPress(item.id)}}>
+            <Avatar source = {require('./images/uthappizza.png')} />
             <ListItem.Content>
                 <ListItem.Title>
                     {item.name}
